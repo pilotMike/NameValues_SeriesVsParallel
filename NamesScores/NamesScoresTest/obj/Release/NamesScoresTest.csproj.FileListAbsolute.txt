@@ -1,0 +1,8 @@
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\bin\Release\p022_names.txt
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\bin\Release\NamesScoresTest.dll
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\bin\Release\NamesScoresTest.pdb
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\bin\Release\NamesScores.exe
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\bin\Release\NamesScores.pdb
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\obj\Release\NamesScoresTest.csprojResolveAssemblyReference.cache
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\obj\Release\NamesScoresTest.dll
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\obj\Release\NamesScoresTest.pdb

@@ -1,0 +1,8 @@
+C:\Users\IBM_ADMIN\OneDrive\Projects\Euler Challenges\NamesScores\NamesScores\bin\Debug\NamesScores.exe.config
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\bin\Debug\NamesScores.exe.config
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\bin\Debug\NamesScores.exe
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\bin\Debug\NamesScores.pdb
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\obj\Debug\NamesScores.csprojResolveAssemblyReference.cache
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\obj\Debug\NamesScores.exe
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\obj\Debug\NamesScores.pdb
+D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\bin\Debug\p022_names.txt
