@@ -6,3 +6,11 @@ D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\bin\Release\Na
 D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\obj\Release\NamesScoresTest.csprojResolveAssemblyReference.cache
 D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\obj\Release\NamesScoresTest.dll
 D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScoresTest\obj\Release\NamesScoresTest.pdb
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScoresTest\bin\Release\p022_names.txt
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScoresTest\bin\Release\NamesScoresTest.dll
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScoresTest\bin\Release\NamesScoresTest.pdb
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScoresTest\bin\Release\NamesScores.exe
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScoresTest\bin\Release\NamesScores.pdb
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScoresTest\obj\Release\NamesScoresTest.csprojResolveAssemblyReference.cache
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScoresTest\obj\Release\NamesScoresTest.dll
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScoresTest\obj\Release\NamesScoresTest.pdb

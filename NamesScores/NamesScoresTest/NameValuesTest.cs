@@ -19,12 +19,21 @@ namespace NamesScoresTest
         }
 
         [TestMethod]
-        public void calculates_list_correctly()
+        public void calculates_series_list_correctly()
         {
-            //var names = new List<string>{"COLIN", "COLIN"};
-            //var expected = 53 + 53*2;
-            //var result = Program.GetSumOfNameValuesInSeries(names); 
-            //Assert.AreEqual(expected, result);
+            var names = new List<string>{"COLIN", "COLIN"};
+            var expected = 53 + 53*2;
+            var result = Program.ProcessSeries(names);
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void calculates_parallel_list_correctly()
+        {
+            var names = new List<string> { "COLIN", "COLIN" };
+            var expected = 53 + 53 * 2;
+            var result = Program.ProcessParallel(names);
+            Assert.AreEqual(expected, result);
         }
     }
 }

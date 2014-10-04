@@ -5,3 +5,10 @@ D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\bin\Release\NamesS
 D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\obj\Release\NamesScores.exe
 D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\obj\Release\NamesScores.pdb
 D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\obj\Release\NamesScores.csprojResolveAssemblyReference.cache
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\NamesScores.exe.config
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Release\NamesScores.exe
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Release\NamesScores.pdb
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\p022_names.txt
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\NamesScores.exe
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\NamesScores.pdb
+D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Release\NamesScores.csprojResolveAssemblyReference.cache

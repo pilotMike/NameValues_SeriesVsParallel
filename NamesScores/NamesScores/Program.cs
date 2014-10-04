@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -27,6 +29,7 @@ namespace NamesScores
 
             Do(ProcessParallel, "parallel process");
             Do(ProcessSeries, "series process");
+            Do(ProcessAsLoop, "parallel sort, series loop process");
 
             Console.WriteLine();
             Console.ReadLine();
@@ -34,9 +37,12 @@ namespace NamesScores
 
         public static void Do(Func<int> action, string text)
         {
-            var start = DateTime.Now;
+            var sw = new Stopwatch();
+            sw.Start();
             var result = action();
-            Console.WriteLine("completed " + text + " in " + (DateTime.Now - start));
+            sw.Stop();
+            //Console.WriteLine(result);
+            Console.WriteLine("completed " + text + " in " + sw.Elapsed);
         }
 
         /// <summary>
@@ -45,9 +51,19 @@ namespace NamesScores
         /// </summary>
         public static int ProcessParallel()
         {
-            var result = _names.AsParallel()
+            return ProcessParallel(_names);
+        }
+
+        /// <summary>
+        /// Sorts names in parallel, then gets the name's character values *
+        /// the position in the list.
+        /// </summary>
+        public static int ProcessParallel(IEnumerable<string> names)
+        {
+            var result = names.AsParallel()
                 .OrderBy(a => a)
-                .Select((t, i) => GetNameNumberValue(t)*(i + 1))
+                .Select((t, i) => GetNameNumberValue(t) * (i + 1))
+                .AsUnordered()
                 .Sum();
             return result;
         }
@@ -58,11 +74,44 @@ namespace NamesScores
         /// </summary>
         public static int ProcessSeries()
         {
-            var result = _names
+            return ProcessSeries(_names);
+        }
+
+        /// <summary>
+        /// Sorts names, then gets the name's character values *
+        /// the position in the list.
+        /// </summary>
+        public static int ProcessSeries(IEnumerable<string> names)
+        {
+            var result = names
                 .OrderBy(a => a)
-                .Select((t, i) => GetNameNumberValue(t)*(i + 1))
+                .Select((t, i) => GetNameNumberValue(t) * (i + 1))
                 .Sum();
             return result;
+        }
+
+        /// <summary>
+        /// Does the same operation, but uses a for loop to add to the
+        /// sum.
+        /// </summary>
+        /// <returns></returns>
+        public static int ProcessAsLoop()
+        {
+            return ProcessAsLoop(_names);
+        }
+
+        /// <summary>
+        /// Does the same operation, but uses a for loop to add to the
+        /// sum.
+        /// </summary>
+        /// <returns></returns>
+        public static int ProcessAsLoop(IEnumerable<string> names)
+        {
+            int sum = 0;
+            var sorted = names.AsParallel().OrderBy(a => a).ToArray();
+            for (int i = 0; i < sorted.Length; i++)
+                sum += GetNameNumberValue(sorted[i])*(i + 1);
+            return sum;
         }
 
         /// <summary>
@@ -72,19 +121,7 @@ namespace NamesScores
         /// <returns></returns>
         public static int GetNameNumberValue(string name)
         {
-            return name.Sum(c => GetCharacterNumber(c));
-        }
-
-        /// <summary>
-        /// Pass the upper case character to get its value;
-        /// </summary>
-        /// <param name="c"></param>
-        /// <returns></returns>
-        private static int GetCharacterNumber(char c)
-        {
-            const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            int number = letters.IndexOf(c) + 1; // so that A = 1
-            return number;
+            return name.Sum(c => c - 64);
         }
 
 
@@ -96,31 +133,13 @@ namespace NamesScores
             {
                 using (var reader = new StreamReader(fName))
                 {
-                    var line = reader.ReadLine();
-                    line = RemoveQuotes(line).ToUpper();
-                    var names = line.Split(',');
-                    _names = names;
+                    _names = reader.ReadLine().Replace("\"", "").ToUpper().Split(',');
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-        }
-
-
-        /// <summary>
-        /// Returns a new string without any quotation marks.
-        /// </summary>
-        /// <param name="source"></param>
-        /// <returns></returns>
-        private static string RemoveQuotes(string source)
-        {
-            var sb = new StringBuilder();
-            foreach (var c in source)
-                if (c != '"')
-                    sb.Append(c);
-            return sb.ToString();
         }
         #endregion OpenFile
     }
