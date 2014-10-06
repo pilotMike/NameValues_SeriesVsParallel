@@ -12,3 +12,10 @@ D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\p022_n
 D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\NamesScores.exe
 D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\NamesScores.pdb
 D:\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Release\NamesScores.csprojResolveAssemblyReference.cache
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\NamesScores.exe.config
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Release\NamesScores.exe
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Release\NamesScores.pdb
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\p022_names.txt
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\NamesScores.exe
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Release\NamesScores.pdb
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Release\NamesScores.csprojResolveAssemblyReference.cache

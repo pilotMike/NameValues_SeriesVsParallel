@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace NamesScores
 {
@@ -27,9 +28,10 @@ namespace NamesScores
         {
             LoadFile(fileName);
 
-            Do(ProcessParallel, "parallel process");
-            Do(ProcessSeries, "series process");
-            Do(ProcessAsLoop, "parallel sort, series loop process");
+            Do(ProcessParallel, "parallel process");                    //.0491
+            Do(ProcessSeries, "series process");                        //.0144
+            Do(ProcessAsLoop, "parallel sort, series loop process");    //.0094
+            Do(ProcessUsingTPL, "parallel sort, process using TPL");    //.0069
 
             Console.WriteLine();
             Console.ReadLine();
@@ -112,6 +114,49 @@ namespace NamesScores
             for (int i = 0; i < sorted.Length; i++)
                 sum += GetNameNumberValue(sorted[i])*(i + 1);
             return sum;
+        }
+
+        /// <summary>
+        /// Orders the list using PLINQ, then uses Parallel.For
+        /// to divide the array into enough sections for each cpu
+        /// core to do one division, then returns the sum.
+        /// </summary>
+        /// <returns></returns>
+        public static int ProcessUsingTPL(IEnumerable<string> names)
+        {
+            string[] ordered = names.AsParallel().OrderBy(a => a).ToArray();
+
+            int coreCount = System.Environment.ProcessorCount;// *2 / 3;
+            var results = new int[coreCount];
+
+            int numItems = ordered.Length / coreCount;
+
+            Parallel.For(0, coreCount, (i) =>
+            {
+                int start = i * ordered.Length / coreCount;
+                int end = (i + 1) * ordered.Length / coreCount;
+                results[i] = GetTPLSum(ordered, i, start, end);
+            });
+            return results.Sum();
+        }
+
+        private static int GetTPLSum(string[] ordered, int i, int start, int end)
+        {
+            int sum = 0;
+            for (int j = start; j < end; j++)
+                sum += GetNameNumberValue(ordered[j]) * (j + 1);
+            return sum;
+        }
+
+        /// <summary>
+        /// Orders the list using PLINQ, then uses Parallel.For
+        /// to divide the array into enough sections for each cpu
+        /// core to do one division, then returns the sum.
+        /// </summary>
+        /// <returns></returns>
+        public static int ProcessUsingTPL()
+        {
+            return ProcessUsingTPL(_names);
         }
 
         /// <summary>

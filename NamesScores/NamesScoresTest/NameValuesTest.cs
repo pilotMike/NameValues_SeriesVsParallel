@@ -35,5 +35,14 @@ namespace NamesScoresTest
             var result = Program.ProcessParallel(names);
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void calculates_TPL_correctly()
+        {
+            var names = new List<string> { "COLIN", "COLIN" };
+            var expected = 53 + 53 * 2;
+            var result = Program.ProcessUsingTPL(names);
+            Assert.AreEqual(expected, result);
+        }
     }
 }

@@ -6,3 +6,10 @@ D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\obj\Debug\NamesSco
 D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\obj\Debug\NamesScores.exe
 D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\obj\Debug\NamesScores.pdb
 D:\SkyDrive\Projects\Euler Challenges\NamesScores\NamesScores\bin\Debug\p022_names.txt
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Debug\NamesScores.exe.config
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Debug\NamesScores.exe
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Debug\NamesScores.pdb
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Debug\p022_names.txt
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Debug\NamesScores.exe
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\bin\Debug\NamesScores.pdb
+C:\Users\IBM_ADMIN\Documents\GitHub\NameValues_SeriesVsParallel\NamesScores\NamesScores\obj\Debug\NamesScores.csprojResolveAssemblyReference.cache
